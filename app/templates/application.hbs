@@ -1,2 +1,25 @@
-<h1>This is an outer app.</h1>
-{{outlet}}
+{{#bs-navbar type='inverse' as |navbar|}}
+    <div class="container">
+        <div class="navbar-header">
+            {{navbar.toggle}}
+            <a class="navbar-brand" href="#">Ember1</a>
+        </div>
+        {{#navbar.content}}
+            {{#navbar.nav as |nav|}}
+            {{#nav.item}}
+                {{#nav.link-to "contact" }}Contact{{/nav.link-to}}
+            {{/nav.item}}
+            {{#nav.item}}
+                {{#nav.link-to "about"}}About Us{{/nav.link-to}}
+            {{/nav.item}}
+            {{#nav.item}}
+                {{#nav.link-to "rentals"}}Rentals{{/nav.link-to}}
+            {{/nav.item}}
+            {{/navbar.nav}}
+        {{/navbar.content}}
+  </div>
+{{/bs-navbar}}
+
+<div class="container">
+    {{outlet}}
+</div>
