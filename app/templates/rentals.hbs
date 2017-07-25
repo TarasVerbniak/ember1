@@ -6,13 +6,14 @@
     About Us
   {{/link-to}}
 
-  {{#each model as |rental|}}
-    <div class="listing">
-      <h1>{{rental.name}}</h1>
-      <p>Owner: {{rental.owner}}</p>
-      <p>Type: {{rental.type}}</p>
-      <p>Location: {{rental.location}}</p>
-      <p>Number of bedrooms: {{rental.bedrooms}}</p>
-    </div>
-  {{/each}}
+  {{#list-filter
+    filter=(action 'filterByCity')
+    as |rentals|
+  }}
+      <ol class="results">
+        {{#each rentals as |rentalItem|}}
+          <li>{{rental-listing rental=rentalItem}}</li>
+        {{/each}}
+      </ol>
+  {{/list-filter}}
 </div>
