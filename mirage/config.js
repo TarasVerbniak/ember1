@@ -11,7 +11,7 @@ export default function() {
             "type": "Estate",
             "location": "San Francisco",
             "bedrooms": 15,
-            "image":'https://upload.wikimedia.org/wikipedia/commons/c/cb/Crane_estate_(5).jpg'
+            "image":'https://image.shutterstock.com/z/stock-photo-low-angle-view-of-skyscrapers-in-shenzhen-china-526689706.jpg'
         }
         }, {
           type: 'rentals',
@@ -33,7 +33,7 @@ export default function() {
             "type": "Estate",
             "location": "Kyiv",
             "bedrooms": 2,
-            "image":'https://upload.wikimedia.org/wikipedia/commons/c/cb/Crane_estate_(5).jpg'
+            "image":'https://image.shutterstock.com/z/stock-photo-empty-brick-floor-front-of-modern-building-in-shanghai-505622722.jpg'
         }
       }];
 

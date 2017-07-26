@@ -6,6 +6,22 @@ body{
     position: relative;
     padding-bottom: 50px;
 }
+.container{
+    text-align: center;
+}
+ol{
+    list-style: none;
+}
+input{
+    width: 50%;
+    padding: 5px;
+    font-size: 20px;
+    text-align: center;
+}
+ol{
+    padding: 0;
+    margin: 0 0 0 15px;
+}
 .ember-view.active{
     color: red !important;
     font-weight: bold !important;
@@ -52,4 +68,9 @@ footer{
     background: #333;
     color: #ffffff;
     text-align: center;
+}
+@media screen and (max-width: 450px){
+    .image img{
+        width: 100%;
+    }
 }
