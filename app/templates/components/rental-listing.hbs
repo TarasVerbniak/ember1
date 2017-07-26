@@ -1,10 +1,15 @@
 <div class="listing">
     <h1>{{rental.name}}</h1>
+    {{#link-to 'rentals.show' rental}}
+    <button class="btn btn-success">
+        Go to {{rental.name}}
+    </button>
+    {{/link-to}}
     <p>Owner: {{rental.owner}}</p>
     <p>Type: {{rental.type}}</p>
     <p>Type: {{rental-property-type rental.type}} - {{rental.type}}</p>
 
-    <p>Location: {{rental.location}}</p>
+    <p class="location">Location: {{rental.location}}</p>
     <p>Number of bedrooms: {{rental.bedrooms}}</p>
         <a {{action 'toggleImageSize'}} class="image {{if isWide "wide"}}">
             <img src="{{rental.image}}" alt="">

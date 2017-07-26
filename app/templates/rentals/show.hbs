@@ -1,0 +1,20 @@
+<div class="listing">
+    <h1>{{model.name}}</h1>
+    <p>Owner: {{model.owner}}</p>
+    <p>Type: {{model.type}}</p>
+    <p>Type: {{rental-property-type model.type}} - {{model.type}}</p>
+
+    <p class="location">Location: {{model.location}}</p>
+    <p>Number of bedrooms: {{model.bedrooms}}</p>
+        <a {{action 'toggleImageSize'}} class="image {{if isWide "wide"}}">
+            <img src="{{model.image}}" alt="">
+            <h4 class="display">Click to view larger image</h4>
+        </a>  
+        
+    <h4>
+        {{#link-to 'rentals'}}
+            Return to Rentals
+        {{/link-to}}    
+    </h4>
+</div>
+

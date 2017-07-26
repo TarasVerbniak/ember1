@@ -5,15 +5,5 @@
   {{#link-to 'about' class="button"}}
     About Us
   {{/link-to}}
-
-  {{#list-filter
-    filter=(action 'filterByCity')
-    as |rentals|
-  }}
-      <ol class="results">
-        {{#each rentals as |rentalItem|}}
-          <li>{{rental-listing rental=rentalItem}}</li>
-        {{/each}}
-      </ol>
-  {{/list-filter}}
 </div>
+{{outlet}}

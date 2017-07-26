@@ -34,7 +34,20 @@ test('should list available rentals.', function (assert) {
 });
 
 test('should filter the list of rentals by city.', function (assert) {
+    visit('/');
+    fillIn('input', 'Kyiv');
+    keyEvent('input', 'keyup', 69);
+    andThen( () => {
+        assert.equal(find('.results .location').length, 2, 'should contain 2 listings');
+        assert.equal(find('.results .location:contains("Kyiv")').length, 2, 'should contain 2 listings of Kyiv');
+    });
 });
 
-test('should show details for a selected rental', function (assert) {
+test('should show details for a specific rental', function (assert) {
+  visit('/rentals');
+  click('a:contains("Grand Old Mansion")');
+  andThen(function() {
+    assert.equal(currentURL(), '/rentals/grand-old-mansion', 'should navigate to show route');
+    assert.equal(find('.listing h1').text(), "Grand Old Mansion", 'should list rental title');
+  });
 });

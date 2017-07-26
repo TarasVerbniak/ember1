@@ -7,7 +7,7 @@ export default Ember.Controller.extend({
         return this.get('store').query('rental', { location: param });
       } else {
         return this.get('store').findAll('rental');
-      }
+      }      
     }
   }
 });
